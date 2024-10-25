@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Time Display</title>
+</head>
+<body>
+  <h1>The current time is:</h1>
+  <p id="time-display"></p>
+
+  <script>
+    function updateTime() {
+      var currentTime = new Date();
+      var timeString = currentTime.toLocaleString();
+      document.getElementById("time-display").textContent = timeString;
+    }
+
+    // update every second
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+</html>
